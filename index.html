@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Charles Semali - Contact</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/avatar.png" type="image/png" />
+
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Charles Semali - Co-founder" />
+    <meta property="og:description"
+        content="Digital business card for Charles Semali. Tap to call, text, or save contact." />
+    <meta property="og:image" content="/img/avatar.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="localhost/cards" />
+
+    <!-- Styles -->
+    <style>
+        html {
+            height: 100vh;
+            overflow: hidden;
+        }
+        body {
+            margin: 0;
+            font-family: system-ui, sans-serif;
+            background: linear-gradient(to bottom, #1D305E 50%, #F9A11B 50%);
+            min-height: 100vh;
+            position: relative;
+            padding: 20px;
+        }
+
+        .pattern-overlay {
+            background: url(img/pattern1.png) no-repeat;
+            opacity: 0.1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            z-index: 0;
+            background-size: cover;
+        }
+
+        .container-wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 480px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-section {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .profile-pic-container {
+            flex: 1;
+            border-radius: 1rem 0 0 1rem;
+            overflow: hidden;
+        }
+
+        .profile-pic-container img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .logo-container {
+            flex: 1;
+            border-radius: 0 1rem 1rem 0;
+            overflow: hidden;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+            background: #fff;
+        }
+
+        .socials a {
+            margin: 0 0.4rem;
+            font-size: 1.4rem;
+            color: #4b5563;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .icon-btn {
+            flex: 1 1 22%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.6rem 0.3rem;
+            text-align: center;
+            border-radius: 10px;
+            background: #f3f4f6;
+            color: #111827;
+        }
+
+        .icon-btn.green {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .icon-btn i {
+            font-size: 1.4rem;
+            margin-top: 0.3rem;
+        }
+
+        .carousel {
+            overflow-x: auto;
+            margin-top: 2rem;
+            display: flex;
+            scroll-snap-type: x mandatory;
+        }
+
+        .slide {
+            min-width: 85%;
+            margin-right: 1rem;
+            scroll-snap-align: start;
+            background: #fefefe;
+            padding: 1rem;
+            border-radius: 1rem;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 200px;
+            border-radius: .3rem;
+            object-fit: cover;
+        }
+
+        h2.name {
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="pattern-overlay"></div>
+
+    <main class="container-wrap">
+        <div class="profile-section">
+            <!-- User image -->
+            <div class="profile-pic-container">
+                <img src="/cards/img/avatar.png" alt="Profile Picture" />
+            </div>
+            <!-- DDC Logo -->
+            <div class="logo-container">
+                <img src="/cards/img/ddclogo.png" alt="Logo" />
+            </div>
+        </div>
+
+        <h2 class="name">Charles Semali</h2>
+        <p>Co-founder - Diaspora Design and Construction</p>
+
+        <div class="button-row">
+            <a class="icon-btn" href="tel:+255743711744">
+                Call<br /><i class="fas fa-phone"></i>
+            </a>
+            <a class="icon-btn" href="sms:+255743711744">
+                Text<br /><i class="fas fa-sms"></i>
+            </a>
+            <a class="icon-btn" href="mailto:charles@ddctanzania.com">
+                Email<br /><i class="fas fa-envelope"></i>
+            </a>
+            <a class="icon-btn green" href="/cards/vcf/charles.vcf" download>
+                Save<br /><i class="fas fa-download"></i>
+            </a>
+        </div>
+
+        <div class="socials" style="margin-top: 1rem;">
+            <a href="https://instagram.com/ddctanzania"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="carousel">
+            <div class="slide">
+                <img src="/cards/img/properties/paje_45.webp" alt="DDC Properties" />
+            </div>
+            <div class="slide">
+                <img src="/cards/img/properties/paje_10.webp" alt="DDC Properties" />
+            </div>
+            <div class="slide">
+                <img src="/cards/img/properties/paje_22.webp" alt="DDC Properties" />
+            </div>
+            <div class="slide">
+                <img src="/cards/img/properties/paje_27.webp" alt="DDC Properties" />
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
