@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Charles Semali - Contact</title>
+    <title>Diaspora Design & Construction - Contact</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="/img/avatar.png" type="image/png" />
+    <link rel="icon" href="/cards/img/ddclogo.png" type="image/png" />
 
     <!-- Pico.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.10/css/pico.min.css" />
@@ -16,32 +16,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Charles Semali - Co-founder" />
+    <meta property="og:title" content="Diaspora Design & Construction" />
     <meta property="og:description"
-        content="Digital business card for Charles Semali. Tap to call, text, or save contact." />
+        content="Digital business card for Diaspora Design & Construction. Tap to call, text, or save contact." />
     <meta property="og:image" content="/img/avatar.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="localhost/cards" />
 
-    <!-- Styles -->
     <style>
         html {
             height: 100vh;
-            overflow: hidden;
+            overflow: auto;
         }
+
         body {
             margin: 0;
             font-family: system-ui, sans-serif;
             background: linear-gradient(to bottom, #1D305E 50%, #F9A11B 50%);
             min-height: 100vh;
-            position: relative;
             padding: 20px;
+            position: relative;
+            background-attachment: fixed;
         }
 
         .pattern-overlay {
-            background: url(img/pattern1.png) no-repeat;
+            background: url(img/pattrn2.png) no-repeat;
             opacity: 0.1;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
@@ -59,6 +60,13 @@
             background: #ffffff;
             border-radius: 1.5rem;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        .contact-mini {
+            max-width: 400px;
+            padding: 1.5rem;
+            font-size: 0.9rem;
         }
 
         .profile-section {
@@ -69,7 +77,7 @@
 
         .profile-pic-container {
             flex: 1;
-            border-radius: 1rem 0 0 1rem;
+            border-radius: 1rem;
             overflow: hidden;
         }
 
@@ -81,7 +89,7 @@
 
         .logo-container {
             flex: 1;
-            border-radius: 0 1rem 1rem 0;
+            border-radius: 1rem;
             overflow: hidden;
         }
 
@@ -140,77 +148,170 @@
             margin-right: 1rem;
             scroll-snap-align: start;
             background: #fefefe;
-            padding: 1rem;
+            padding-right: 5px;
             border-radius: 1rem;
             flex-shrink: 0;
         }
 
         .slide img {
-            width: 100%;
-            height: 200px;
+            width: 300px;
+            height: 200px !important;
             border-radius: .3rem;
             object-fit: cover;
         }
 
-        h2.name {
+        h2.name,
+        h3.name {
             margin-bottom: 0;
         }
 
+        .vertical-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .contact-mini .icon-btn {
+            flex: none;
+            padding: 0.4rem;
+            font-size: 0.9rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.6rem;
+            background: #f3f4f6;
+        }
+
+        .contact-mini .icon-btn.green {
+            background-color: #10b981;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(1rem);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2,
+        h3,
+        p {
+            color: hsl(205, 15%, 41%);
+        }
+
+        .socials.text-center {
+            display: flex !important;
+            justify-content: center;
+            flex-flow: column;
+            text-align: center;
+        }
+
+        /* .socials.text-center a {
+            font-size: 14px;
+        } */
+
+        .centre {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="pattern-overlay"></div>
 
+    <!-- Main Profile Card -->
     <main class="container-wrap">
         <div class="profile-section">
-            <!-- User image -->
-            <div class="profile-pic-container">
+            <!-- <div class="profile-pic-container">
                 <img src="/cards/img/avatar.png" alt="Profile Picture" />
-            </div>
-            <!-- DDC Logo -->
+            </div> -->
             <div class="logo-container">
                 <img src="/cards/img/ddclogo.png" alt="Logo" />
             </div>
         </div>
 
-        <h2 class="name">Charles Semali</h2>
-        <p>Co-founder - Diaspora Design and Construction</p>
+        <h2 class="name centre">Company Contacts</h2>
+        <p class="centre">Diaspora Design and Construction</p>
 
         <div class="button-row">
-            <a class="icon-btn" href="tel:+255743711744">
+            <a class="icon-btn" href="tel:+255750554432">
                 Call<br /><i class="fas fa-phone"></i>
             </a>
-            <a class="icon-btn" href="sms:+255743711744">
+            <a class="icon-btn" href="sms:+255750554432">
                 Text<br /><i class="fas fa-sms"></i>
             </a>
-            <a class="icon-btn" href="mailto:charles@ddctanzania.com">
+            <a class="icon-btn" href="mailto:sales@ddctanzania.com">
                 Email<br /><i class="fas fa-envelope"></i>
             </a>
-            <a class="icon-btn green" href="/cards/vcf/charles.vcf" download>
+            <a class="icon-btn green" href="vcf/ddc.vcf" download>
                 Save<br /><i class="fas fa-download"></i>
             </a>
         </div>
 
-        <div class="socials" style="margin-top: 1rem;">
-            <a href="https://instagram.com/ddctanzania"><i class="fab fa-instagram"></i></a>
+        <div class="socials text-center" style="margin-top: 1rem;">
+            Connect on social media:
+            <div class="icons-list-items">
+                <a href="https://instagram.com/ddc_tanzania"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/+255750554432"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
         </div>
 
         <div class="carousel">
-            <div class="slide">
-                <img src="/cards/img/properties/paje_45.webp" alt="DDC Properties" />
+            <div class="slide"><img src="/cards/img/properties/paje_45.webp" alt="DDC Properties" /></div>
+            <div class="slide"><img src="/cards/img/properties/paje_10.webp" alt="DDC Properties" /></div>
+            <div class="slide"><img src="/cards/img/properties/paje_22.webp" alt="DDC Properties" /></div>
+            <div class="slide"><img src="/cards/img/properties/paje_27.webp" alt="DDC Properties" /></div>
+        </div>
+    </main>
+
+    <!-- Jane Doe Mini Card -->
+    <main class="container-wrap contact-mini">
+        <div class="profile-section">
+            <div class="profile-pic-container">
+                <img src="/cards/img/donald.jpeg" alt="Profile Picture" />
             </div>
-            <div class="slide">
-                <img src="/cards/img/properties/paje_10.webp" alt="DDC Properties" />
-            </div>
-            <div class="slide">
-                <img src="/cards/img/properties/paje_22.webp" alt="DDC Properties" />
-            </div>
-            <div class="slide">
-                <img src="/cards/img/properties/paje_27.webp" alt="DDC Properties" />
+            <div style="flex: 2; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3 class="name">Donald<br>Rusimbi</h3>
+                    <p style="margin: 0;">Founder - DDC</p>
+                </div>
+                <div class="vertical-icons">
+                    <a class="icon-btn" href="tel:+255742888892"><i class="fas fa-phone"></i></a>
+                    <a class="icon-btn" href="https://wa.me/+14153611225"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a class="icon-btn" href="mailto:donald@ddctanzania.com"><i class="fas fa-envelope"></i></a>
+                    <a class="icon-btn green" href="vcf/donald.vcf" download><i class="fas fa-download"></i></a>
+                </div>
             </div>
         </div>
+    </main>
 
+    <!-- John Mushi Mini Card -->
+    <main class="container-wrap contact-mini">
+        <div class="profile-section">
+            <div class="profile-pic-container">
+                <img src="/cards/img/charles.jpg" alt="Profile Picture" />
+            </div>
+            <div style="flex: 2; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h3 class="name">Charles<br>Semali</h3>
+                    <p style="margin: 0;">Co-founder - DDC</p>
+                </div>
+                <div class="vertical-icons">
+                    <a class="icon-btn" href="tel:+255744223447"><i class="fas fa-phone"></i></a>
+                    <a class="icon-btn" href="https://wa.me/+16785512089"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a class="icon-btn" href="mailto:charles@ddctanzania.com"><i class="fas fa-envelope"></i></a>
+                    <a class="icon-btn green" href="vcf/charles.vcf" download><i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 

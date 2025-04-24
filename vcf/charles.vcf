@@ -1,8 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
+N:Semali;Charles;;;
 FN:Charles Semali
-TITLE:Co founder
-TEL;TYPE=cell:+255743711744
-EMAIL:charles@ddctanzania.com
-URL:https://ddctanzania.com
+ORG:Diaspora Design and Construction;
+TITLE:Co-founder
+TEL;TYPE=CELL:+255744223447
+EMAIL;TYPE=INTERNET:charles@ddctanzania.com
+URL;TYPE=WHATSAPP:https://wa.me/+16785512089
 END:VCARD
